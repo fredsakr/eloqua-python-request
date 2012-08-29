@@ -5,10 +5,25 @@ Eloqua Python Request
 
 ## Usage
 
-### GET
+### Import
 	import sys
 	sys.path.append('./lib')
 	from eloqua_request import EloquaRequest
 
+### GET
 	request = EloquaRequest('site', 'user', 'password')
-	response = request.get('/assets/emails?search=Demand*&page=1&count=50&depth=minimal', None)
+	response = request.get(url, None)
+
+### POST
+	request = EloquaRequest('site', 'user', 'password')
+	response = request.post(url, data)
+
+
+### PUT
+	request = EloquaRequest('site', 'user', 'password')
+	response = request.put(url, data)
+
+
+### DELETE
+	request = EloquaRequest('site', 'user', 'password')
+	response = request.delete(url, None)
